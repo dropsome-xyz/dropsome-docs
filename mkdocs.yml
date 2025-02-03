@@ -1,0 +1,110 @@
+site_name: Dropsome Hub 
+site_url: https://dropsome-xyz
+repo_url: https://github.com/dropsome-xyz/dropsome-docs
+repo_name: Dropsome-xyz/dropsome
+site_description: Welcome to the Dropsome application documentation hub! Here, you will find comprehensive user guides, helpful resources, and all necessary legal documents to enhance your experience with our application. Explore our site to unlock the full potential of Dropsome and stay informed about our policies and updates.
+site_author: Dropsome Builders 
+
+
+edit_uri: ''
+
+nav:
+  - legal/privacy-policy.md
+
+# Beware this is strongly dependent on names of folders , example:
+# images have to be stored within the docs/images folder
+theme:
+  # https://squidfunk.github.io/mkdocs-material/setup/
+  name: material
+  logo: "images/logo192.png"
+  favicon: "images/favicon.ico"
+  custom_dir: overrides
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=palette+sw#color-palette-toggle
+  palette:
+    - scheme: slate # dark mode scheme
+      primary: black
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: default # light mode scheme
+      primary: black
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    - navigation.expand
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - navigation.top
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=content+copy#code-copy-button
+    - content.code.copy
+    - navigation.tabs
+    # may be used
+    # - navigation.footer
+  use_directory_urls: false
+
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=social#social-links
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dropsome-xyz
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/dropsome_xyz
+  meta:
+    description: "Dropsome is a decentralized finance (DeFi) app that allows users to share a small amount of SOL with someone who doesn't have a wallet. By generating a wallet and a secure link, the sender can easily drop SOL for a receiver to claim, without requiring them to have a wallet initially. The receiver can then claim the funds after installing a wallet app like Phantom or Solflare."
+    keywords: "Dropsome, DeFi app,share SOL, transfer SOL, Solana wallet, wallet app"
+    author: "Dropsome"
+
+# https://www.mkdocs.org/user-guide/configuration/#plugins
+plugins:
+  - search
+  - macros
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: false
+      enable_last_modified_by: false
+  - social:
+      cards_layout_options:
+        background_color: "#000000"
+        # background_image: images/solana-handbook-open-graph-image.png
+
+# https://squidfunk.github.io/mkdocs-material/customization/?h=extra+css#additional-css
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # https://squidfunk.github.io/mkdocs-material/reference/math/
+  # used for fractions and math
+  - pymdownx.arithmatex:
+      generic: true
+  # https://squidfunk.github.io/mkdocs-material/reference/data-tables/
+  - tables
+  # https://squidfunk.github.io/mkdocs-material/reference/math/
+  # used for fractions and math
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
