@@ -10,6 +10,7 @@ edit_uri: ''
 
 nav:
   - legal/privacy-policy.md
+  - legal/terms-of-service.md
 
 # Beware this is strongly dependent on names of folders , example:
 # images have to be stored within the docs/images folder
