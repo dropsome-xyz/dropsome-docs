@@ -1,4 +1,4 @@
-# Dropsome Hub 
+# Dropsome Docs 
 
 **Dropsome** is a decentralized finance (DeFi) app that allows users to share a small amount of SOL with someone who doesn't have a wallet. By generating a wallet and a secure link, the sender can easily drop SOL for a receiver to claim, without requiring them to have a wallet initially. The receiver can then claim the funds after installing a wallet app like Phantom or Solflare.
 
