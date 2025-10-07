@@ -42,7 +42,44 @@
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
-    color: #6d63ec;
+    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.md-typeset h1 {
+    background: linear-gradient(135deg, #025373, #05F2DB, #F205CB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 640px) {
+    .md-typeset h1 {
+        font-size: 50px !important;
+    }
+    
+    .md-typeset h1::before {
+        content: "";
+        display: block;
+        height: 50px;
+        background-image: url('../images/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto 20px;
+    }
+}
+
+.md-typeset h2 {
+    background: linear-gradient(135deg, #025373, #05F2DB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.md-typeset h3,
+.md-typeset h4 {
+    color: #F205CB;
 }
 
 .md-typeset h2,
@@ -133,6 +170,19 @@ img {
     border-radius: 7px;
 }
 
+html, body {
+    background-image: radial-gradient(circle farthest-side at 50% 100%, rgba(1, 9, 18, 0), rgba(1, 6, 14, 0.6) 36%, rgba(1, 14, 29, 0.6) 55%, rgba(2, 53, 73, 0.4));
+}
+
+.md-button, .md-typeset .md-button {
+    border-color: #05F2DB;
+    color: #05F2DB;
+}
+.md-button:hover, .md-typeset .md-button:hover {
+    background-color: #05F2DB;
+    color: #000000;
+}
+
 /*Logo size*/
 .md-header__button.md-logo {
     margin-top: 0;
@@ -149,11 +199,25 @@ img {
 }
 
 /* Index Page Style */
-.vertical-align-right {
+.h2-with-logo {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.h2-with-logo h2 {
+    flex: 1;
+    margin: 0;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo-container img {
+    max-width: 400px;
+    height: auto;
 }
 
 .grid-container {
@@ -184,7 +248,13 @@ width: 60%;
         width: 900px;
     }
 
-    .grid-container .vertical-align-right {
+    .h2-with-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .h2-with-logo .logo-container {
         display: none;
     }
 }
