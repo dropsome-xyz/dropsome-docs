@@ -1,9 +1,7 @@
 ---
 hide:
-  - toc
+  - navigation
 ---
-
-_Last updated: April 5, 2025_  
 
 ## **1. Acceptance of Terms**
 By accessing or using the Dropsome interface at https://dropsome.xyz (the "Interface"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the Interface. We may update these Terms at any time, and continued use of the Interface constitutes acceptance of any changes. The latest version will be available at https://dropsome.xyz.
