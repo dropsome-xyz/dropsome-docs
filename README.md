@@ -1,8 +1,28 @@
-# Dropsome Docs 
+# Dropsome Docs
 
-**Dropsome** is a decentralized finance (DeFi) app that allows users to share a small amount of SOL with someone who doesn't have a wallet. By generating a wallet and a secure link, the sender can easily drop SOL for a receiver to claim, without requiring them to have a wallet initially. The receiver can then claim the funds after installing a wallet app like Phantom or Solflare.
+Dropsome is a simple way to send SOL to someone who does not have a wallet yet. A sender creates a drop, gets a claim link, and shares it privately. The receiver opens the link, installs a wallet, imports the temporary recovery phrase, and claims the funds.
 
-## Project Links
-- Program deployed on the Devnet: [explorer.solana.com/address/FDs5cA7e...xDDWr2vz](https://explorer.solana.com/address/FDs5cA7ecjQcUvfmaAE2xhhTQ4HJm8BuSdaKxDDWr2vz?cluster=devnet)
-- Application: [Dropsome.xyz](https://dropsome.xyz)
-- App repository: [github.com/dropsome-xyz/dropsome](https://github.com/dropsome-xyz/dropsome)
+This is a personal SOL gift and onboarding flow. It is not a farming airdrop.
+
+## Project links
+- App: [www.dropsome.xyz](https://www.dropsome.xyz)
+- Docs: [docs.dropsome.xyz](https://docs.dropsome.xyz)
+- GitHub: [github.com/dropsome-xyz/dropsome](https://github.com/dropsome-xyz/dropsome)
+- Claim example: [dropsome.xyz/claim?data=...](https://www.dropsome.xyz/claim?data=...)
+- Refund: [www.dropsome.xyz/refund](https://www.dropsome.xyz/refund)
+- Program ID: `DSdHwC1vGPL4KzNAhgxMYggZnBBaY8upKx6uo655kVYZ`
+
+## What Dropsome does
+- lets a sender drop SOL without collecting a wallet address in advance
+- keeps funds in a vault until the receiver claims them
+- makes the claim flow work for a wallet-less receiver
+- allows the original sender to refund the drop while it remains unclaimed
+
+## Docs site structure
+- [Overview](docs/index.md)
+- [Drop guide](docs/features/drop.md)
+- [Claim guide](docs/features/claim.md)
+- [Refund guide](docs/features/refund.md)
+- [Technical: program](docs/technical/program.md)
+- [Technical: encryption](docs/technical/encryption.md)
+- [Security disclaimer](docs/legal/security-disclaimer.md)

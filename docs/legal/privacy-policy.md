@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 ## **1. Introduction**  
 Dropsome, accessible at [https://dropsome.xyz](https://dropsome.xyz), values the privacy of participants who visit and interact with the interface (the “Interface”). We are committed to minimizing the collection of personal data and ensuring transparency about any data processing activities.  
 

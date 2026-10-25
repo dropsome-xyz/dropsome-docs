@@ -1,45 +1,39 @@
 ---
 title: "Dropsome Docs"
 hide:
-  - navigation
   - toc
 ---
 
-
 <h1 style="font-size: 60px;">Dropsome Docs</h1>
 
-<div class="h2-with-logo">
-    <h2>Dropsome - A DeFi Project to Share SOL with Newbies</h2>
+<div class="h2-with-logo ">
+    <h2>A handy way to share SOL with newbies.</h2>
     <div class="logo-container">
-        <img src="./images/logo.png" width="400 alt="Dropsome">
+        <img src="./images/logo.png" width="400" alt="Dropsome">
     </div>
 </div>
 
 <div markdown class="text-box">
-**Dropsome** is a decentralized finance (DeFi) app that allows users to share a small amount of SOL with someone who doesn't have a wallet. By generating a wallet and a secure link, the sender can easily drop SOL for a receiver to claim, without requiring them to have a wallet initially. The receiver can then claim the funds after installing a wallet app like Phantom or Solflare.
+**Dropsome** makes it easy to send SOL to someone who does not have a wallet yet. You create a drop, share a claim link, and the receiver claims it after installing a wallet and importing the temporary recovery phrase. If the drop is never claimed, the sender can always refund it.
+</div>
 
-</div >
+!!! info 
+    Want to chat with our docs? Download an LLM-friendly <a href="llms-full.txt">text file of the full Dropsome docs</a>.
 
 <div class="grid-container" markdown>
 <div class="grid cards" markdown>
 
--   :material-share-variant:{ .lg .middle } __Drop__
+-   [**Drop**](features/drop.md) — send SOL with a link
 
-    ---
-    Sender sets SOL amount, generates a claim link, and shares it.
+    Set the amount, generate a claim link, and send it privately.
 
--   :material-hand-coin:{ .lg .middle } __Claim__
+-   [**Claim**](features/claim.md) — receive SOL from a link
 
-    ---
+    Open the link, import the temporary recovery phrase, connect your wallet, and the claim happens automatically.
 
-    Receiver opens the link, installs a wallet, connects, and claims SOL.
+-   [**Refund**](features/refund.md) — get your SOL back
 
--   :material-backup-restore:{ .lg .middle } __Refund__
-
-    ---
-
-    Sender refunds unclaimed SOL by selecting the drop.
+    If a drop is unclaimed, the sender can refund it at any time.
 
 </div>
-
 </div>

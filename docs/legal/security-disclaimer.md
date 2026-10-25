@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 ## **Disclaimer & safety notes**
 
 Dropsome was created to simplify **small cryptocurrency transfers** such as loans and gifts, not for storing large amounts.  
