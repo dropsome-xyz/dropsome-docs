@@ -34,7 +34,7 @@ Source: https://docs.dropsome.xyz/
 
 -   [**Claim**](features/claim.md) — receive SOL from a link
 
-    Open the link, import the temporary recovery phrase, and claim the funds.
+    Open the link, import the temporary recovery phrase, connect your wallet, and the claim happens automatically.
 
 -   [**Refund**](features/refund.md) — get your SOL back
 
@@ -52,7 +52,7 @@ Source: https://docs.dropsome.xyz/features/claim/
 
 # Claim — receive SOL from a link
 
-If someone sent you a Dropsome drop, you do not need a wallet first. Open the claim link, install a wallet, import the temporary recovery phrase, and claim the funds.
+If someone sent you a Dropsome drop, you do not need a wallet first. Open the claim link, install a wallet, import the temporary recovery phrase, connect your wallet to the page, and the claim happens automatically.
 
 ---
 
@@ -67,7 +67,7 @@ If someone sent you a Dropsome drop, you do not need a wallet first. Open the cl
 ## Step by step
 
 ### 1. Open the claim link
-Click the link you received. The page will show the drop amount and a claim button.
+The page will show the drop amount and your recovery phrase.
 
 ### 2. Install a wallet
 Use an official wallet app such as:
@@ -92,8 +92,7 @@ This is the most important step. The claim page gives you a **recovery phrase**.
 !!! warning "Why you should not create a new wallet"
     The funds are locked to one specific wallet address. If you create a new wallet instead of importing the temporary one, the drop will not be there.
 
-### 4. Connect the wallet and claim
-After importing, connect the wallet on the claim page and click **Claim**. The transaction usually completes in a few seconds.
+After importing, connect the wallet on the claim page. The claim happens automatically once the correct wallet is connected — no button to click. The transaction usually completes in a few seconds.
 
 ### 5. Your SOL is now in your wallet
 Once confirmed, the SOL appears in the wallet you imported. You can hold it, send it, or move it to another wallet later.
@@ -126,7 +125,7 @@ A **recovery phrase** is a list of 12–24 words that acts like the master key t
 
 - [ ] Downloaded the wallet from the official app/site only
 - [ ] Imported the wallet using the recovery phrase from the claim page
-- [ ] Claimed successfully and confirmed the SOL in the wallet
+- [ ] Confirmed the SOL appeared in the wallet after automatic claim
 - [ ] Moved funds to a wallet you control long-term
 - [ ] Deleted or archived the claim link after claiming
 - [ ] Never shared the recovery phrase with anyone
@@ -571,7 +570,7 @@ AES-256-CBC provides confidentiality for the payload, but it is not an authentic
 ### Link format
 
 ```text
-https://www.dropsome.xyz/claim?data=<encrypted_payload>
+https://dropsome.xyz/claim?data=<encrypted_payload>
 ```
 
 The encrypted payload:
