@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://dropsome-xyz/</loc>
-         <lastmod>2025-12-19</lastmod>
+         <loc>https://docs.dropsome.xyz/</loc>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
-         <loc>https://dropsome-xyz/legal/privacy-policy/</loc>
-         <lastmod>2025-12-19</lastmod>
+         <loc>https://docs.dropsome.xyz/features/claim/</loc>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
-         <loc>https://dropsome-xyz/legal/security-disclaimer/</loc>
-         <lastmod>2025-12-19</lastmod>
+         <loc>https://docs.dropsome.xyz/features/drop/</loc>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
-         <loc>https://dropsome-xyz/legal/terms-of-service/</loc>
-         <lastmod>2025-12-19</lastmod>
+         <loc>https://docs.dropsome.xyz/features/refund/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.dropsome.xyz/legal/privacy-policy/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.dropsome.xyz/legal/security-disclaimer/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.dropsome.xyz/legal/terms-of-service/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.dropsome.xyz/technical/encryption/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.dropsome.xyz/technical/program/</loc>
+         <lastmod>2026-10-25</lastmod>
     </url>
 </urlset>

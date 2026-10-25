@@ -1,0 +1,768 @@
+# Dropsome Documentation
+
+This file contains the complete Dropsome documentation. Each section includes a link to its published page.
+
+
+---
+
+## Overview
+
+Source: https://docs.dropsome.xyz/
+
+<h1 style="font-size: 60px;">Dropsome Docs</h1>
+
+<div class="h2-with-logo ">
+    <h2>A handy way to share SOL with newbies.</h2>
+    <div class="logo-container">
+        <img src="./images/logo.png" width="400" alt="Dropsome">
+    </div>
+</div>
+
+<div markdown class="text-box">
+**Dropsome** makes it easy to send SOL to someone who does not have a wallet yet. You create a drop, share a claim link, and the receiver claims it after installing a wallet and importing the temporary recovery phrase. If the drop is never claimed, the sender can always refund it.
+</div>
+
+!!! info 
+    Want to chat with our docs? Download an LLM-friendly <a href="llms-full.txt">text file of the full Dropsome docs</a>.
+
+<div class="grid-container" markdown>
+<div class="grid cards" markdown>
+
+-   [**Drop**](features/drop.md) — send SOL with a link
+
+    Set the amount, generate a claim link, and send it privately.
+
+-   [**Claim**](features/claim.md) — receive SOL from a link
+
+    Open the link, import the temporary recovery phrase, and claim the funds.
+
+-   [**Refund**](features/refund.md) — get your SOL back
+
+    If a drop is unclaimed, the sender can refund it at any time.
+
+</div>
+</div>
+
+
+---
+
+## Claim
+
+Source: https://docs.dropsome.xyz/features/claim/
+
+# Claim — receive SOL from a link
+
+If someone sent you a Dropsome drop, you do not need a wallet first. Open the claim link, install a wallet, import the temporary recovery phrase, and claim the funds.
+
+---
+
+## What you need
+
+- a phone or computer with internet
+- a Solana wallet app
+- the claim link you received
+
+---
+
+## Step by step
+
+### 1. Open the claim link
+Click the link you received. The page will show the drop amount and a claim button.
+
+### 2. Install a wallet
+Use an official wallet app such as:
+
+- **Phantom** — [phantom.app](https://phantom.app)
+- **Solflare** — [solflare.com](https://solflare.com)
+- **Backpack** — [backpack.app](https://backpack.app)
+
+!!! tip "Only download from the official links"
+    Fake wallet apps do exist. Use the wallet provider's official site or app store listing.
+
+### 3. Import the wallet with the recovery phrase
+This is the most important step. The claim page gives you a **recovery phrase**. That phrase belongs to a temporary wallet made for this drop.
+
+**You must import that exact wallet.** Do not create a new wallet.
+
+1. Open your wallet app
+2. Choose **Import wallet** or **Recover wallet**
+3. Enter the recovery phrase exactly as shown
+4. Finish setup in the wallet app
+
+!!! warning "Why you should not create a new wallet"
+    The funds are locked to one specific wallet address. If you create a new wallet instead of importing the temporary one, the drop will not be there.
+
+### 4. Connect the wallet and claim
+After importing, connect the wallet on the claim page and click **Claim**. The transaction usually completes in a few seconds.
+
+### 5. Your SOL is now in your wallet
+Once confirmed, the SOL appears in the wallet you imported. You can hold it, send it, or move it to another wallet later.
+
+---
+
+## Recommended: move funds to your own wallet
+
+The imported wallet was created for the drop. For best security, create a fresh wallet and move the funds there:
+
+1. Create a new wallet in your app and save its recovery phrase securely
+2. Send the claimed SOL from the temporary wallet to your new wallet address
+3. Delete the temporary wallet if you no longer need it
+
+This keeps your long-term funds in a wallet you control and manage yourself.
+
+---
+
+## What is a recovery phrase?
+
+A **recovery phrase** is a list of 12–24 words that acts like the master key to a wallet. Anyone who has it can control that wallet.
+
+- wallet apps use this standard format
+- the phrase on the claim page is the only way to access the drop wallet
+- never share it with anyone, even the sender
+
+---
+
+## Safety checklist
+
+- [ ] Downloaded the wallet from the official app/site only
+- [ ] Imported the wallet using the recovery phrase from the claim page
+- [ ] Claimed successfully and confirmed the SOL in the wallet
+- [ ] Moved funds to a wallet you control long-term
+- [ ] Deleted or archived the claim link after claiming
+- [ ] Never shared the recovery phrase with anyone
+
+---
+
+## Troubleshooting
+
+| Issue | Likely cause | Fix |
+|-------|--------------|-----|
+| "Wallet not found" | Wrong phrase entered or a new wallet was created instead of importing | Re-import the exact recovery phrase from the claim page |
+| "Already claimed" | Someone else used the link | Contact the sender; they may still be able to refund if it is still unclaimed |
+| Network error / timeout | Solana congestion or RPC issue | Wait a minute and retry; check [Solana status](https://solana.com/status) |
+| "Invalid recovery phrase" | Typo, wrong order, or extra spaces | Copy and paste the phrase carefully and use the exact order shown |
+
+---
+
+## Related
+
+- [Drop →](drop.md) — how the sender created the drop
+- [Security Disclaimer →](../legal/security-disclaimer.md)
+
+
+---
+
+## Drop
+
+Source: https://docs.dropsome.xyz/features/drop/
+
+# Drop — send SOL with a link
+
+A drop lets you send SOL without collecting a wallet address in advance. The app creates a temporary wallet, locks the funds in a program vault, and gives you a claim link to share privately.
+
+---
+
+## How it works
+
+### 1. Enter the amount
+Choose the amount of SOL you want to send. The app will generate a temporary wallet and a unique claim link.
+
+### 2. Funds are locked on-chain
+The SOL, plus a little gas reserve and app fee, is stored in a Dropsome vault on Solana until the receiver claims it or you refund it.
+
+### 3. Share the link privately
+Send the claim link through a private channel: text message, encrypted email, DM, or in person. Anyone who holds the link can claim the drop.
+
+---
+
+## What happens on-chain
+
+When you create a drop, the app creates a vault and a record for that drop:
+
+- the **vault** holds the SOL until claim or refund
+- the **record** tracks the sender, temporary receiver wallet, amount, and claim state
+- the temporary wallet is the only wallet authorized to claim the funds
+- the sender can refund at any time while the drop remains unclaimed
+
+This is not a generic airdrop flow. Each drop is tied to one sender and one temporary receiver wallet.
+
+---
+
+## Fees and balances
+
+| Fee | Who pays | Typical behavior |
+|-----|----------|------------------|
+| Service fee | Sender | Small app fee charged by the protocol |
+| Network fee reserve | Sender | Set aside to cover the receiver’s claim transaction |
+| Rent exemption | Sender | Temporarily locked and returned on claim or refund |
+
+The app shows the total before you confirm. You need enough SOL to cover the drop amount plus fees.
+
+---
+
+## Prerequisites
+
+- a Solana wallet such as Phantom, Solflare, or Backpack
+- enough SOL for the amount plus fees
+- an internet connection and a private way to send the claim link
+
+---
+
+## Security reminders
+
+!!! warning "Treat the claim link like cash"
+    Anyone who has the link can claim the funds. Share it only through a private, trusted channel.
+
+!!! tip "Start small"
+    If you are testing the flow for the first time, use a small amount.
+
+!!! info "Refund is always available"
+    As long as the drop remains unclaimed, you can refund the full amount back to your wallet. See [Refund](refund.md).
+
+---
+
+## Troubleshooting
+
+| Issue | Likely cause | Fix |
+|-------|--------------|-----|
+| "Insufficient balance" | Not enough SOL for the amount and fees | Add more SOL or lower the amount |
+| Transaction failed | Network congestion or RPC issue | Retry in a minute and check Solana status |
+| Drop not showing in refund flow | Wrong wallet connected or already claimed | Connect the original sender wallet and check the claim status |
+
+---
+
+## Related
+
+- [Claim →](claim.md) — how the receiver claims the drop
+- [Refund →](refund.md) — how the sender gets funds back if unclaimed
+- [Security Disclaimer →](../legal/security-disclaimer.md)
+
+
+---
+
+## Refund
+
+Source: https://docs.dropsome.xyz/features/refund/
+
+# Refund — get your SOL back
+
+If a drop is still unclaimed, the original sender can refund it at any time. The funds stay in the vault until someone claims them or the sender chooses to return them.
+
+---
+
+## When you can refund
+
+- the drop is still **unclaimed**
+- you connect the **same wallet** that created the drop
+- the drop is still tied to the original sender and receiver wallet
+
+There is no automatic expiry in the basic refund flow.
+
+---
+
+## Step by step
+
+### 1. Connect the sender wallet
+Open the refund page and connect the wallet that created the drop.
+
+### 2. Review your unclaimed drops
+You will see the active drops associated with that wallet, including the amount and status.
+
+### 3. Select a drop and click Refund
+Choose the drop or drops you want to return and sign the transaction.
+
+### 4. Confirm the transaction
+The funds return to your wallet once the transaction is confirmed. The claim link becomes invalid after refund.
+
+---
+
+## On-chain mechanics
+
+When you refund:
+
+- the program closes the associated **record**
+- the vault is emptied and returned to the sender wallet
+- the temporary receiver wallet is no longer authorized to claim
+- the original sender keeps control of the funds while the drop is active
+
+This keeps the refund flow simple and predictable: if it was never claimed, the sender can always recover it.
+
+---
+
+## Important notes
+
+!!! warning "No partial refund"
+    You refund the whole drop, not a portion of it.
+
+!!! info "Only the sender can refund"
+    The refund transaction must be signed by the wallet that originally created the drop.
+
+!!! tip "Refund right away if the link was shared carelessly"
+    If a claim link was posted publicly or sent to the wrong person, refund it immediately to stop the drop from being claimed.
+
+---
+
+## Troubleshooting
+
+| Issue | Likely cause | Fix |
+|-------|--------------|-----|
+| Drop not showing | Wrong wallet connected or already claimed | Connect the original sender wallet and check the claim status |
+| Transaction failed | RPC issue or network congestion | Retry in a minute and check Solana status |
+| "Already claimed" | Someone used the claim link before the refund | The funds were transferred out; if this was unexpected, contact the recipient |
+
+---
+
+## Related
+
+- [Drop →](drop.md) — how to create the drop
+- [Claim →](claim.md) — how the receiver claims it
+- [Security Disclaimer →](../legal/security-disclaimer.md)
+
+
+---
+
+## Privacy Policy
+
+Source: https://docs.dropsome.xyz/legal/privacy-policy/
+
+## **1. Introduction**  
+Dropsome, accessible at [https://dropsome.xyz](https://dropsome.xyz), values the privacy of participants who visit and interact with the interface (the “Interface”). We are committed to minimizing the collection of personal data and ensuring transparency about any data processing activities.  
+
+This Privacy Policy outlines the types of data that may be processed when using the Interface and the third-party services involved in its operation.  
+
+## **2. Data We Do Not Collect**  
+- The Dropsome **does not** collect, store, or process personally identifiable information (PII), such as names, emails, or IP addresses.  
+- We **do not** use cookies, trackers, or store user data on external databases.  
+- The Dropsome operates as a non-custodial application, meaning all transactions occur directly on the blockchain.  
+
+## **3. Third-Party Services**  
+To operate effectively, the Interface relies on third-party service providers. These providers may process certain technical data to ensure platform stability, performance, and security. The categories of third-party services include:  
+
+- **Technical Infrastructure Providers** – Hosting, security, and networking services that enable the Interface to function.  
+- **Development & Monitoring Tools** – Services used for debugging and maintaining platform stability.  
+- **Communication Vendors** – Platforms facilitating support inquiries.  
+- **Analytics & Performance Vendors** – Tools that may collect anonymized data to improve usability and security.  
+
+## **4. Data Processed in Connection with the Interface**  
+
+### **Types of Data Processed**  
+To the maximum extent possible, Dropsome minimizes data collection. However, interacting with the Interface may involve the following types of data processing:  
+
+1. **Blockchain Data**  
+   - Wallet addresses (public blockchain addresses), transactions, and balance information are publicly accessible on the blockchain.  
+   - The Interface does not store or process this data off-chain.  
+   - Public blockchain addresses may be used to analyze user journeys in an **aggregated and anonymized manner** to improve the user experience.  
+   - Dropsome **does not track or process** blockchain data at an individual user level.  
+
+2. **Technical and Security Data**  
+   - Third-party service providers (e.g., hosting and security vendors) may process certain technical data such as IP addresses, device/browser details, and traffic patterns as part of maintaining platform integrity.  
+   - These logs are typically stored by third-party service providers and are **not used by Dropsome for tracking or profiling** users.  
+
+3. **Log Files**  
+   - The Interface follows standard logging practices, which may include network logs for **security, debugging, and performance monitoring**.  
+   - This data is processed in an **aggregated and anonymized** manner where possible.  
+   - Dropsome does not link log file data to personally identifiable information.  
+
+### **How and Why We Use This Data**  
+- **Security & Fraud Prevention** – Ensuring platform integrity and identifying irregular activity.  
+- **Performance & Optimization** – Improving the Interface by analyzing anonymized usage trends.  
+- **Technical Support** – Debugging issues and maintaining reliability.  
+
+Dropsome **does not use** this data for advertising, tracking, or selling to third parties.  
+
+## **5. Data Retention**  
+- Dropsome does not store any user data off-chain.  
+- Any logs collected by third-party services follow their respective retention policies.  
+- Aggregated data, which cannot directly identify a user, may be retained for service improvement purposes.  
+
+## **6. Security & User Responsibility**  
+- The Interface encrypts the secret phrase before sharing it with the receiver.  
+- We **never** request private keys or seed phrases. Users should never enter these into any third-party websites.  
+- Users remain fully responsible for safeguarding their wallet credentials.  
+
+## **7. User Rights & Contact**  
+Since the Interface does not collect personal data, users do not need to request access, modification, or deletion of any stored information. For general inquiries, please contact us at [legal@dropsome.xyz](mailto:legal@dropsome.xyz).  
+
+## **8. Changes to This Policy**  
+We may update this policy as needed. The latest version will always be available at [https://dropsome.xyz](https://dropsome.xyz). Continued use of the Interface constitutes acceptance of the updated Privacy Policy.
+
+
+---
+
+## Security Disclaimer
+
+Source: https://docs.dropsome.xyz/legal/security-disclaimer/
+
+## **Disclaimer & safety notes**
+
+Dropsome was created to simplify **small cryptocurrency transfers** such as loans and gifts, not for storing large amounts.  
+This page explains, in plain language, what using a “magic link” and a generated wallet means for your security, and how to use Dropsome in a safer way.
+
+You use Dropsome at your own risk.
+
+## **How the magic link works**
+
+When you create a drop, Dropsome generates a **new wallet** for that drop.  
+The secret phrase (seed phrase) for this wallet is:
+
+- Generated on our backend.
+- Encrypted with a server-side key.
+- Embedded (in encrypted form) in the **claim link** you share.
+
+When the receiver opens the claim link in the official Dropsome app:
+
+- The page automatically sends the encrypted data to our server.
+- The server decrypts the seed phrase and returns it to the page.
+- The receiver can then import that wallet into a Solana wallet app (for example Phantom, Solflare or Backpack).
+
+The main risk is simple: **if the link or the seed phrase is ever leaked or shared with the wrong person, they can claim or move the funds from that wallet.**
+
+## **What this means for trust**
+
+- The sender and the receiver both have (or can get) access to the same seed phrase.
+- Either of them could keep a copy of it.
+- Anyone who sees that seed phrase later can restore the wallet and control whatever is still inside it.
+
+Because of that, the drop wallet should be treated as **temporary and shared‑risk**, not as a long‑term personal wallet.
+
+## **Tips for senders**
+
+- **Keep drops small.**  
+  Use Dropsome for onboarding‑size gifts, not life savings.
+
+- **Share links in private.**  
+  Send the claim link only to the intended person, preferably over a private, end‑to‑end encrypted channel (for example Signal, Telegram, WhatsApp, iMessage).
+
+- **Delete the link when you’re done.**  
+  After the drop is successfully claimed or refunded, remove the claim link from chats, notes, and other places where it was stored, and (if possible) ask the receiver to delete it on their side too.
+
+- **Avoid copying the seed phrase.**  
+  Don’t store it in notes, screenshots, email, cloud drives, or chats.
+
+- **Use the refund option if something feels off.**  
+  If you think the link was posted publicly or shared with the wrong person, and the drop is still unclaimed, use the **refund** flow to pull the funds back to your own wallet.
+
+## **Tips for receivers**
+
+- **Treat the drop wallet as a one‑time wallet.**  
+  Use it only to receive the gift from Dropsome and start diving into the world of cryptocurrency.
+
+- **Move funds to your own wallet quickly.**  
+  After you claim:
+  1. Figure out how to manage wallets on your own.
+  2. Create a **new Solana wallet** where only you know the seed phrase.
+  3. Transfer all SOL (and any tokens) from the drop wallet to your new wallet.
+  4. Stop using the drop wallet afterwards.
+
+- **Do not use the drop wallet for savings.**  
+  During claiming, the seed phrase or the link to it can easily travel through copy‑paste, messengers, screenshots, or shared devices. Because of that, it’s safest to treat this wallet as short‑term only and not keep savings there.
+
+- **Only enter the seed phrase in trusted wallet apps.**  
+  Install wallet apps from their official websites or app stores, and never type the seed phrase into random websites, bots, or forms.
+
+## **General security reminders**
+
+- Keep any seed phrase you care about **offline** and stored safely.  
+- Always double‑check that you are on the real Dropsome site before creating or claiming a drop.  
+- Be suspicious of anyone asking you to send them your seed phrase or a screenshot of it — no one legitimate needs it.
+
+Using Dropsome, like any on-chain tool, involves risk. Please make sure you understand these points before you create or claim a drop.
+
+
+---
+
+## Terms of Service
+
+Source: https://docs.dropsome.xyz/legal/terms-of-service/
+
+## **1. Acceptance of Terms**
+By accessing or using the Dropsome interface at https://dropsome.xyz (the "Interface"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the Interface. We may update these Terms at any time, and continued use of the Interface constitutes acceptance of any changes. The latest version will be available at https://dropsome.xyz.
+
+## **2. Description of Service**
+Dropsome is a decentralized finance (DeFi) application built on the Solana blockchain, designed to facilitate the sharing of small amounts of SOL with individuals who do not yet have a wallet. The Interface enables the following features:
+* **Drop**: Users ("Depositors") can send SOL to a Program-Derived Address (PDA) account, which creates a new encrypted wallet for the recipient. The wallet data is encrypted and shared via a link. When the link is opened, the recipient receives clear instructions to set up and initialize the wallet.
+* **Claim**: Upon opening the link and initializing the wallet, a transaction transfers the deposited SOL from the PDA to the recipient's new wallet.
+* **Refund**: Depositors can reclaim unclaimed deposits if the recipient does not claim the SOL.
+
+The application (Interface) consists of an on-chain Solana program and a web interface.  
+
+## **3. User Eligibility and Access**
+The Interface is accessible to all users globally without any Know Your Customer (KYC), location, or account requirements. Users are required to connect their Solana wallets directly to utilize the Interface. Users bear full responsibility for ensuring that their use of the Interface complies with all applicable laws and regulations in their jurisdiction. Additionally, users must be of legal age to engage in financial transactions in their jurisdiction to use the Interface.
+
+## **4. User Responsibilities**
+You are solely responsible for your decision to use the Interface, including understanding the risks associated with blockchain technology, SOL volatility, and potential smart contract vulnerabilities.  
+You must secure your wallet credentials, private keys, and any links shared via the Interface. Dropsome is not liable for any loss of funds, unauthorized access, or misuse resulting from your failure to protect your assets.  
+Prohibited activities include, but are not limited to, illegal use, hacking, money laundering, or any attempt to disrupt the Interface or Solana network.
+
+## **5. Intellectual Property**
+* All trademarks, logos, branding, and other intellectual property related to Dropsome are the exclusive property of the Dropsome team.
+* The Solana program and user interface code are open-source and licensed under the **Apache 2.0 license**. Users may access, use, modify, and distribute the code subject to the terms of the Apache 2.0 license, available at https://github.com/dropsome-xyz.
+
+## **6. Fees and Payments**
+A small service fee will be charged to Depositors for each "drop" transaction. This fee is non-refundable unless explicitly stated otherwise. The exact fee amount will be clearly disclosed in the Interface prior to initiating any transaction.
+
+## **7. Disclaimer of Warranties and Limitation of Liability**
+* The Interface is provided "as is" and "as available" without any warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+* Dropsome does not guarantee the security, functionality, or availability of the Interface, the Solana blockchain, or any third-party services. You acknowledge that blockchain technology and cryptocurrency carry inherent risks, including but not limited to smart contract bugs, network failures, and price volatility.
+* To the maximum extent permitted by law, Dropsome shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses, arising out of or in connection with your use of the Interface.
+* You agree that your use of the Interface is at your own risk, and Dropsome is not responsible for any illegal or unauthorized use by third parties.
+
+## **8. Governing Law and Dispute Resolution**
+These Terms shall be governed by and construed in accordance with general principles of international commercial law.
+Any disputes arising from or related to these Terms shall be resolved through binding arbitration administered by the International Chamber of Commerce (ICC) under its Arbitration Rules. The place of arbitration shall be a neutral location to be agreed upon by the parties, or if no agreement is reached, determined by the ICC. The language of the arbitration shall be English. The prevailing party in any arbitration shall be entitled to recover reasonable attorney’s fees and costs.
+
+## **9. Miscellaneous**
+* **Severability**: If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect.
+* **Entire Agreement**: These Terms, together with the Dropsome Privacy Policy (available at https://dropsome.xyz), constitute the entire agreement between you and Dropsome regarding your use of the Interface.
+* **Contact Information**: For legal questions, contact [legal@dropsome.xyz](mailto:legal@dropsome.xyz). For technical support, project issues, or other inquiries, contact [dev@dropsome.xyz](mailto:dev@dropsome.xyz).
+
+## **10. Changes to These Terms**
+We may update these Terms at any time. The most current version will be available at https://dropsome.xyz. Your continued use of the Interface after such changes constitutes your acceptance of the updated Terms.
+
+
+---
+
+## Encryption
+
+Source: https://docs.dropsome.xyz/technical/encryption/
+
+# Encryption — how the claim link works
+
+Dropsome uses an encrypted claim link to deliver a temporary wallet's recovery phrase to the receiver. The recovery phrase is generated on demand, encrypted in the app backend, and decrypted when the receiver opens the link.
+
+---
+
+## The short version
+
+1. The backend generates a temporary wallet for the drop
+2. The recovery phrase is encrypted with a server-side key
+3. The ciphertext is embedded in the claim URL as a `data` payload
+4. The receiver opens the claim page and requests decryption from the API
+5. The app returns the recovery phrase so the user can import it into a wallet
+
+This keeps the flow simple for new users while preserving the on-chain authorization model.
+
+---
+
+## Threat model
+
+| What is protected | How |
+|-------------------|-----|
+| Recovery phrase in the claim link | The link contains encrypted ciphertext, not the phrase in plain text |
+| Recovery phrase in the Dropsome backend | Not persisted by the claim endpoint; decrypted only on demand |
+| Recovery phrase in the browser | Returned to the claiming browser so the user can import the wallet |
+| Server key compromise | Could enable decryption of unclaimed drop payloads |
+
+!!! warning "Trust assumption"
+    The server holds the decryption key and the claim flow returns the decrypted recovery phrase to the receiver's browser. Dropsome does not persist the phrase in the backend, but the claim payload is a bearer credential: anyone who obtains the claim link or its encrypted `data` value may be able to claim the drop. Use this flow for small amounts and share links privately.
+
+---
+
+## Technical details
+
+### Encryption
+- **Algorithm**: AES-256-CBC
+- **Key**: A server-side key kept in environment configuration
+- **IV**: Random per encryption so the same recovery phrase does not produce the same ciphertext
+- **Output**: encrypted payload is encoded and embedded in the claim URL
+
+AES-256-CBC provides confidentiality for the payload, but it is not an authenticated-encryption mode. The claim endpoint must therefore be treated as part of the trusted application flow; this documentation is not a claim that the payload is tamper-proof.
+
+### Link format
+
+```text
+https://www.dropsome.xyz/claim?data=<encrypted_payload>
+```
+
+The encrypted payload:
+- is embedded in the URL as data, not shown to the user in plain text
+- is sent to the API for decryption over HTTPS when the receiver opens the link
+- may be retained in browser history, copied messages, analytics, referrer data, or infrastructure access logs that record full URLs
+- is not intended to be used as a public identifier or shared outside the intended claim flow
+
+The current implementation uses a query parameter rather than a URL fragment. Dropsome's own claim endpoint does not persist the payload or log the decrypted phrase, but the app cannot guarantee that every browser, hosting provider, proxy, monitoring service, or messaging platform will omit the URL from its own records.
+
+### Decryption flow
+
+1. The receiver opens the claim link
+2. The frontend reads the encrypted payload from the URL
+3. The frontend sends it to the API for decryption
+4. The server decrypts it and returns the recovery phrase to the browser
+5. The receiver imports the phrase into a wallet app
+
+The phrase is not stored in local storage or cookies by the app.
+
+---
+
+## What this means for you
+
+### As a sender
+- the claim link is the secret used to retrieve the drop
+- share it only through a trusted private channel
+- keep the link out of public, shared, or automatically indexed spaces
+- if the link is exposed and the drop is still unclaimed, use the refund flow immediately
+
+### As a receiver
+- the recovery phrase shown on the claim page is the only copy needed to access the drop wallet
+- import it into a wallet immediately
+- move the funds to a wallet you control after claiming
+- avoid opening claim links on shared devices or in browsers with untrusted extensions
+
+### If you are building on Dropsome
+- keep the decryption key in a secure environment variable
+- protect the decryption endpoint with the same rate limiting and authentication model as the rest of the app
+- treat the server as a trusted component for the claim flow
+
+---
+
+## Related
+
+- [Security Disclaimer →](../legal/security-disclaimer.md) — plain-language risks
+- [Solana Program →](program.md) — on-chain mechanics
+
+
+---
+
+## Solana Program
+
+Source: https://docs.dropsome.xyz/technical/program/
+
+# Solana Program — on-chain mechanics
+
+The Dropsome program handles the escrow, claim, and refund logic for each drop. This page summarizes the core account model and transaction flow used by the app.
+
+---
+
+## Program ID
+
+**Mainnet**: `DSdHwC1vGPL4KzNAhgxMYggZnBBaY8upKx6uo655kVYZ`
+
+---
+
+## Accounts
+
+### AppState (global config)
+A single PDA at `["app_state"]` stores global config for the app.
+
+```rust
+pub struct AppState {
+    pub is_initialized: bool,
+    pub authority: Pubkey,
+    pub is_active: bool,
+    pub network_fee_reserve: u64,
+    pub treasury: Pubkey,
+    pub fee_basis_points: u16,
+    pub min_drop_amount: u64,
+}
+```
+
+### Record (per drop)
+A PDA at `["record", sender, receiver]` tracks each active drop.
+
+```rust
+pub struct Record {
+    pub sender: Pubkey,
+    pub receiver: Pubkey,
+    pub vault: Pubkey,
+    pub amount: u64,
+}
+```
+
+### Vault (per drop)
+A PDA at `["vault", sender, receiver]` holds the SOL while the drop is active.
+
+---
+
+## Instructions
+
+### 1. `drop` — create a drop
+**Accounts**: sender, temporary receiver keypair, vault, record, app state, treasury, system program
+
+**Flow**:
+1. validate the amount against the minimum and app state
+2. calculate the service fee and reserve requirements
+3. initialize the `Record` account with sender, receiver, vault, and amount
+4. transfer the network fee reserve to the receiver wallet
+5. transfer the drop amount and rent exemption into the vault
+6. transfer the service fee to the treasury
+
+The receiver is a freshly generated wallet keypair, not a PDA. The frontend provides its public key to the program as the claim target.
+
+---
+
+### 2. `claim` — receiver claims funds
+**Accounts**: claimer signer, vault, record, system program
+
+**Flow**:
+1. verify the signer matches the `record.receiver`
+2. transfer the vault balance to the receiver wallet
+3. close the `Record` account so rent goes back to the sender
+4. let the runtime close the empty vault account
+
+Only the wallet generated for the drop can claim it.
+
+---
+
+### 3. `refund` — sender reclaims unclaimed funds
+**Accounts**: sender signer, vault, record, system program
+
+**Flow**:
+1. verify the signer matches the original `record.sender`
+2. transfer the vault balance back to the sender wallet
+3. close the `Record` account
+
+Only the original sender can refund. There is no third-party refund path.
+
+---
+
+### 4. `update` — admin config update
+**Accounts**: authority signer, app state
+
+This updates the global state such as fee settings, min amount, active status, and treasury destination.
+
+---
+
+## Fees
+
+| Fee | Paid by | Destination | Typical behavior |
+|-----|---------|-------------|------------------|
+| Service fee | Sender | Treasury | Small app fee |
+| Network fee reserve | Sender | Receiver wallet | Covers claim transaction gas |
+| Vault rent exemption | Sender | Returned on claim/refund | Temporarily locked in the vault |
+
+The UI should show the total before confirmation so the sender sees the full cost.
+
+---
+
+## Security properties
+
+- **single claimer** — only the generated temporary wallet can claim
+- **single refunder** — only the original sender can refund
+- **no partial refunds** — each drop is refunded in full or not at all
+- **rent is returned** — the accounts are closed cleanly on claim or refund
+- **funds stay in escrow** until a valid claim or refund occurs
+
+---
+
+## Frontend integration
+
+| Action | Frontend behavior | Program call |
+|--------|-------------------|--------------|
+| Drop | generates receiver keypair, encrypts recovery phrase, builds link | `drop` |
+| Claim | decrypts recovery phrase, user imports wallet, connects it | `claim` |
+| Refund | lists sender-owned unclaimed records and builds tx | `refund` |
+
+---
+
+## Deploy and upgrade
+
+- **Framework**: Anchor (Rust)
+- **Program authority**: app state authority
+- **IDL**: generated at build and used by the frontend for transaction construction
+
+---
+
+## Related
+
+- [Encryption →](encryption.md) — claim link security model
+- [Security Disclaimer →](../legal/security-disclaimer.md) — plain-language risk summary

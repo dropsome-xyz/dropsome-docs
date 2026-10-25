@@ -200,19 +200,20 @@ html, body {
 
 /* Index Page Style */
 .h2-with-logo {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
     gap: 60px;
     margin-bottom: 20px;
 }
 
 .h2-with-logo h2 {
-    flex: 1;
     margin: 0;
 }
 
 .logo-container {
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .logo-container img {
