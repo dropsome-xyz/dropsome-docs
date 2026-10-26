@@ -145,8 +145,8 @@ A **recovery phrase** is a list of 12–24 words that acts like the master key t
 
 ## Related
 
-- [Drop →](drop.md) — how the sender created the drop
-- [Security Disclaimer →](../legal/security-disclaimer.md)
+- [Drop](drop.md) — how the sender created the drop
+- [Security Disclaimer](../legal/security-disclaimer.md)
 
 
 ---
@@ -232,9 +232,9 @@ The app shows the total before you confirm. You need enough SOL to cover the dro
 
 ## Related
 
-- [Claim →](claim.md) — how the receiver claims the drop
-- [Refund →](refund.md) — how the sender gets funds back if unclaimed
-- [Security Disclaimer →](../legal/security-disclaimer.md)
+- [Claim](claim.md) — how the receiver claims the drop
+- [Refund](refund.md) — how the sender gets funds back if unclaimed
+- [Security Disclaimer](../legal/security-disclaimer.md)
 
 
 ---
@@ -313,9 +313,9 @@ This keeps the refund flow simple and predictable: if it was never claimed, the 
 
 ## Related
 
-- [Drop →](drop.md) — how to create the drop
-- [Claim →](claim.md) — how the receiver claims it
-- [Security Disclaimer →](../legal/security-disclaimer.md)
+- [Drop](drop.md) — how to create the drop
+- [Claim](claim.md) — how the receiver claims it
+- [Security Disclaimer](../legal/security-disclaimer.md)
 
 
 ---
@@ -616,8 +616,8 @@ The phrase is not stored in local storage or cookies by the app.
 
 ## Related
 
-- [Security Disclaimer →](../legal/security-disclaimer.md) — plain-language risks
-- [Solana Program →](program.md) — on-chain mechanics
+- [Security Disclaimer](../legal/security-disclaimer.md) — plain-language risks
+- [Solana Program](program.md) — on-chain mechanics
 
 
 ---
@@ -763,5 +763,5 @@ The UI should show the total before confirmation so the sender sees the full cos
 
 ## Related
 
-- [Encryption →](encryption.md) — claim link security model
-- [Security Disclaimer →](../legal/security-disclaimer.md) — plain-language risk summary
+- [Encryption](encryption.md) — claim link security model
+- [Security Disclaimer](../legal/security-disclaimer.md) — plain-language risk summary
